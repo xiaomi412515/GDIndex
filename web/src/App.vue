@@ -33,7 +33,7 @@
 			</v-toolbar-items>
 		</v-app-bar>
 
-		<v-content> <router-view /> </v-content>
+		<v-main> <router-view /> </v-main>
 		<LoginDialog :show="showAuthInput" />
 	</v-app>
 </template>
