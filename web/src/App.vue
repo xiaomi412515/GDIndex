@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<v-app-bar app color="secondary" dark>
+		<v-app-bar app>
 			<v-toolbar-title class="headline pointer mr-3 hidden-sm-and-down">
 
 			</v-toolbar-title>
