@@ -1,6 +1,12 @@
 <template>
 	<v-app>
 		<v-app-bar app color="primary" dark>
+			<v-toolbar-title class="headline pointer mr-3 hidden-sm-and-down">
+				<router-link
+					:to="{ path: '/', query: { rootId: $route.query.rootId } }"
+					tag="span"
+					>{{ title }}</router-link
+				>
 			</v-toolbar-title>
 			<v-toolbar-items>
 				<v-menu offset-y v-if="drives.length">
