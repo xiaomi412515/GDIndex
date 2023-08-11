@@ -32,7 +32,9 @@
 			</v-toolbar-items>
 			<portal-target name="navbar" slim />
 			<v-spacer />
+			<v-toolbar-items>
 
+			</v-toolbar-items>
 		</v-app-bar>
 
 		<v-content> <router-view /> </v-content>
