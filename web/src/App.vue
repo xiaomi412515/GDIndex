@@ -2,11 +2,7 @@
 	<v-app>
 		<v-app-bar app color="primary" dark>
 			<v-toolbar-title class="headline pointer mr-3 hidden-sm-and-down">
-				<router-link
-					:to="{ path: '/', query: { rootId: $route.query.rootId } }"
-					tag="span"
-					>{{ title }}</router-link
-				>
+
 			</v-toolbar-title>
 			<v-toolbar-items>
 				<v-menu offset-y v-if="drives.length">
@@ -58,7 +54,7 @@ export default {
 	},
 	computed: {
 		currentDrive() {
-			const id = this.$route.query.rootId || window.props.default_root_id
+			const id =  window.props.default_root_id
 			return this.drives.find((d) => d.value === id)
 		},
 	},
