@@ -1,32 +1,5 @@
 <template>
 	<v-app>
-		<v-app-bar app color="primary" dark>
-			<v-toolbar-items>
-				<v-menu offset-y v-if="drives.length">
-					<template v-slot:activator="{ on }">
-						<v-btn text v-on="on" class="text-none">
-							<v-icon>mdi-cloud</v-icon>&nbsp;{{
-								currentDrive.text
-							}}<v-icon>mdi-menu-down</v-icon>
-						</v-btn>
-					</template>
-					<v-list>
-						<v-list-item
-							v-for="(item, index) in drives"
-							:key="index.id"
-							@click="changeDrive(item.value)"
-						>
-							<v-list-item-title>{{
-								item.text
-							}}</v-list-item-title>
-						</v-list-item>
-					</v-list>
-				</v-menu>
-			</v-toolbar-items>
-			<portal-target name="navbar" slim />
-			<v-spacer />
-		</v-app-bar>
-
 		<v-main> <router-view /> </v-main>
 		<LoginDialog :show="showAuthInput" />
 	</v-app>
