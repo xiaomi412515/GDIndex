@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<v-app-bar app>
+		<v-app-bar app color="primary" dark>
 			<v-toolbar-items>
 				<v-menu offset-y v-if="drives.length">
 					<template v-slot:activator="{ on }">
@@ -27,7 +27,7 @@
 			<v-spacer />
 		</v-app-bar>
 
-		<v-main> <router-view /> </v-main>
+		<v-content> <router-view /> </v-content>
 		<LoginDialog :show="showAuthInput" />
 	</v-app>
 </template>
@@ -48,7 +48,7 @@ export default {
 	},
 	computed: {
 		currentDrive() {
-			const id =  window.props.default_root_id
+			const id = this.$route.query.rootId || window.props.default_root_id
 			return this.drives.find((d) => d.value === id)
 		},
 	},
