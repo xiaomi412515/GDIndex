@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<v-app-bar app>
+		<v-app-bar app color="primary">
 			<v-toolbar-items>
 				<v-menu offset-y v-if="drives.length">
 					<template v-slot:activator="{ on }">
