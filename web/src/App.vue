@@ -1,9 +1,6 @@
 <template>
 	<v-app>
 		<v-app-bar app>
-			<v-toolbar-title class="headline pointer mr-3 hidden-sm-and-down">
-
-			</v-toolbar-title>
 			<v-toolbar-items>
 				<v-menu offset-y v-if="drives.length">
 					<template v-slot:activator="{ on }">
@@ -28,9 +25,6 @@
 			</v-toolbar-items>
 			<portal-target name="navbar" slim />
 			<v-spacer />
-			<v-toolbar-items>
-
-			</v-toolbar-items>
 		</v-app-bar>
 
 		<v-main> <router-view /> </v-main>
